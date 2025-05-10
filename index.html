@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tap & Earn</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Tap to Earn</h1>
+
+    <div id="countdown">Ready?</div>
+
+    <div class="tap-area" onclick="startEarning()">
+      <img src="https://cdn-icons-png.flaticon.com/512/703/703816.png" alt="Coin" class="coin-icon"/>
+      <button class="tap-button">TAP</button>
+    </div>
+
+    <div id="reward"></div>
+    <iframe id="adFrame"></iframe>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
