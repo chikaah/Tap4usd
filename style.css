@@ -1,79 +1,107 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: white;
-  text-align: center;
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #301934; /* Dark purple background */
+    color: #ffd700; /* Gold text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
-  max-width: 400px;
-  margin: 40px auto;
-  padding: 20px;
+    text-align: center;
+    padding: 20px;
 }
 
-h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
+.balance-display {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-#countdown {
-  font-size: 14px;
-  margin-bottom: 20px;
-  color: #e0e0e0;
+.earning-notification {
+    color: #00ff00; /* Green color */
+    margin-bottom: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.tap-area {
-  position: relative;
-  width: 140px;
-  height: 140px;
-  margin: 0 auto;
+.tapping-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
-.coin-icon {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
-  animation: float 2s infinite ease-in-out;
+.coin-3d {
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    color: #301934;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3),
+                inset 2px 2px 3px rgba(255, 255, 255, 0.2);
+    position: relative;
 }
 
-.tap-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 12px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 25px;
-  background: #ffcb05;
-  color: #222;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+.coin-3d::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, #f0e68c, #daa520);
 }
 
-#reward {
-  margin-top: 25px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #10b981;
+.coin-3d span {
+    position: relative;
+    z-index: 1;
 }
 
-iframe {
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  border: none;
+.adsterra-container {
+    margin-top: 20px;
+    /* Adjust styling as needed */
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+.cooldown-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    opacity: 0;
+    pointer-events: none; /* Allows clicks to pass through when hidden */
+    transition: opacity 1s ease-out;
+    border-radius: 10px; /* Match container border-radius if any */
+}
+
+.navigation-menu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: #00ff00; /* Green color */
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-icon {
+    font-size: 1.5em;
+    margin-bottom: 5px;
 }
