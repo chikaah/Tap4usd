@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tap & Earn</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tapping App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Tap to Earn</h1>
-
-    <div id="countdown">Ready?</div>
-
-    <div class="tap-area" onclick="startEarning()">
-      <img src="https://cdn-icons-png.flaticon.com/512/703/703816.png" alt="Coin" class="coin-icon"/>
-      <button class="tap-button">TAP</button>
+    <div class="container">
+        <div class="balance-display">$0.0000</div>
+        <div class="earning-notification"></div>
+        <button class="tapping-button">
+            <div class="coin-3d">
+                <span>$</span>
+            </div>
+        </button>
+        <div id="container-f69c69e6ce8447aa4d902f9e79dab8d3" class="adsterra-container">
+            </div>
+        <div class="cooldown-overlay"></div>
+        <div class="navigation-menu">
+            <button class="nav-button" id="main-menu-btn">
+                <div class="nav-icon">🏠</div>
+                <span>Main</span>
+            </button>
+            <button class="nav-button" id="task-menu-btn">
+                <div class="nav-icon">✅</div>
+                <span>Tasks</span>
+            </button>
+            <button class="nav-button" id="withdraw-menu-btn">
+                <div class="nav-icon">💰</div>
+                <span>Withdraw</span>
+            </button>
+        </div>
     </div>
 
-    <div id="reward"></div>
-    <iframe id="adFrame"></iframe>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script async="async" data-cfasync="false" src="//popslowergrocer.com/f69c69e6ce8447aa4d902f9e79dab8d3/invoke.js"></script>
 </body>
 </html>
